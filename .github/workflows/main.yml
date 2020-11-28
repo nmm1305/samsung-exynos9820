@@ -23,7 +23,7 @@ jobs:
                      model=${{ matrix.model }} \
                      name="Cruel-V3.9"         \
                      toolchain=$TOOLCHAIN      \
-                     +magisk                   \
+                     +magisk=canary            \
                      +nohardening              \
                      +ttl                      \
                      +wireguard                \
@@ -32,6 +32,7 @@ jobs:
                      +ntfs                     \
                      +morosound                \
                      +boeffla_wl_blocker       \
+                     +always_permit            \
         2>&1 | tee config.info
     - name: Install gcc-aarch64-linux-gnu
       env:
