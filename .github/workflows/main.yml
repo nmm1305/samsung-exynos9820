@@ -4,7 +4,7 @@ on: [push]
 
 env:
   TOOLCHAIN: default
-  INSTALLER: yes
+  INSTALLER: no
 
 jobs:
   build:
@@ -32,6 +32,7 @@ jobs:
                      +ntfs                     \
                      +morosound                \
                      +boeffla_wl_blocker       \
+                     +always_permit            \
         2>&1 | tee config.info
     - name: Install gcc-aarch64-linux-gnu
       env:
